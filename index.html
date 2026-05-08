@@ -211,6 +211,51 @@
     }
     footer span { color:var(--green); font-weight:700; }
 
+    /* ── PRICING ── */
+    #pricing { background: linear-gradient(160deg, #0b2a18 0%, #0d1b2a 60%); }
+    .pricing-card {
+      background: var(--card-bg); border-radius: 24px;
+      padding: 2rem 1.5rem; text-align: center;
+      border: 1px solid #1e3a52; transition: transform .25s, border-color .25s, box-shadow .25s;
+      height: 100%;
+    }
+    .pricing-card:hover { transform: translateY(-8px); border-color: var(--green); box-shadow: 0 16px 40px #2ecc7133; }
+    .pricing-card.featured {
+      border-color: var(--green); border-width: 2px;
+      box-shadow: 0 12px 40px #2ecc7144;
+    }
+    .pricing-badge {
+      display: inline-block; background: var(--green); color: #0d1b2a;
+      font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+      padding: .2rem .7rem; border-radius: 50px; margin-bottom: .8rem;
+    }
+    .pricing-icon { font-size: 2.8rem; margin-bottom: .8rem; }
+    .pricing-price {
+      font-family: 'Baloo 2', cursive; font-size: 2.4rem; font-weight: 800;
+      color: var(--green); line-height: 1;
+    }
+    .pricing-price span { font-size: 1rem; font-weight: 600; color: var(--muted); }
+    .pricing-desc { color: var(--muted); font-size: .9rem; margin: .6rem 0 1.2rem; min-height: 48px; }
+    .pricing-includes { list-style: none; padding: 0; margin: 0 0 1.5rem; text-align: left; }
+    .pricing-includes li { font-size: .88rem; padding: .3rem 0; color: var(--text); }
+    .pricing-includes li i { color: var(--green); margin-right: .5rem; }
+    .btn-order {
+      display: block; width: 100%;
+      background: var(--green); color: #0d1b2a; font-weight: 800;
+      border: none; padding: .6rem 1rem; border-radius: 50px;
+      font-size: .95rem; text-decoration: none;
+      transition: opacity .2s, transform .2s;
+    }
+    .btn-order:hover { opacity: .85; transform: translateY(-2px); color: #0d1b2a; }
+    .btn-order-outline {
+      display: block; width: 100%;
+      background: transparent; color: var(--green); font-weight: 800;
+      border: 2px solid var(--green); padding: .55rem 1rem; border-radius: 50px;
+      font-size: .95rem; text-decoration: none;
+      transition: background .2s, color .2s;
+    }
+    .btn-order-outline:hover { background: var(--green); color: #0d1b2a; }
+
     /* ── SCROLL REVEAL ── */
     .reveal { opacity:0; transform:translateY(32px); transition: opacity .65s ease, transform .65s ease; }
     .reveal.visible { opacity:1; transform:none; }
@@ -231,8 +276,9 @@
       <ul class="navbar-nav ms-auto gap-lg-2">
         <li class="nav-item"><a class="nav-link" href="#problem">Project</a></li>
         <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
       </ul>
     </div>
   </div>
@@ -257,7 +303,7 @@
       <div class="col-lg-6 text-center">
         <!-- Replace src with your actual start-menu screenshot -->
         <img
-          src="https://raw.githubusercontent.com/sangelion/power_innovation_skbtm/main/game_start_menu_screenshot.PNG"
+          src="https://raw.githubusercontent.com/inovasiskbtm/powerinnovation/main/game_start_menu_screenshot.PNG"
           alt="Game Start Menu Screenshot"
           class="screenshot-hero floating"
         />
@@ -341,21 +387,21 @@
           <!-- Gameplay screenshot -->
           <div class="col-6">
             <div class="screenshot-frame">
-              <img src="https://raw.githubusercontent.com/sangelion/power_innovation_skbtm/main/game_play.png" alt="Gameplay" />
+              <img src="https://raw.githubusercontent.com/inovasiskbtm/powerinnovation/main/game_play.png" alt="Gameplay" />
               <span class="screen-label">⚡ Gameplay</span>
             </div>
           </div>
           <!-- Game Over screenshot -->
           <div class="col-6">
             <div class="screenshot-frame">
-              <img src="https://raw.githubusercontent.com/sangelion/power_innovation_skbtm/main/game_over.png" alt="Game Over" />
+              <img src="https://raw.githubusercontent.com/inovasiskbtm/powerinnovation/main/game_over.png" alt="Game Over" />
               <span class="screen-label" style="color:var(--red);border-color:var(--red)">💀 Game Over</span>
             </div>
           </div>
           <!-- Win screen -->
           <div class="col-12">
             <div class="screenshot-frame">
-              <img src="https://raw.githubusercontent.com/sangelion/power_innovation_skbtm/main/victory.png" alt="Win Screen" />
+              <img src="https://raw.githubusercontent.com/inovasiskbtm/powerinnovation/main/victory.png" alt="Win Screen" />
               <span class="screen-label" style="color:var(--yellow);border-color:var(--yellow)">🏆 Victory!</span>
             </div>
           </div>
@@ -476,7 +522,92 @@
   </div>
 </section>
 
-<!-- ══════════════ SECTION 6 – VIDEO & DOWNLOAD ══════════════ -->
+<!-- ══════════════ SECTION 6 – PRICING ══════════════ -->
+<section id="pricing">
+  <div class="container reveal">
+    <div class="text-center mb-5">
+      <div class="section-label">Pricing</div>
+      <h2 class="section-title">Get the Eat Smart Game</h2>
+      <p class="section-sub">Choose the package that suits you — from the raw game file to full consultation support.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Source File -->
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card">
+          <div class="pricing-icon">🎮</div>
+          <h5 class="fw-800 mb-1">PictoBlox Source File</h5>
+          <div class="pricing-price">RM 15 <span>/ one-time</span></div>
+          <p class="pricing-desc">The raw .sb3 game file — open and explore it yourself in PictoBlox.</p>
+          <ul class="pricing-includes">
+            <li><i class="bi bi-check-circle-fill"></i>PictoBlox .sb3 project file</li>
+            <li><i class="bi bi-check-circle-fill"></i>All game sprites & assets</li>
+            <li><i class="bi bi-check-circle-fill"></i>AI hand motion blocks included</li>
+          </ul>
+          <a href="https://forms.google.com/REPLACE_WITH_YOUR_FORM_ID" target="_blank" class="btn-order-outline">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Documentation -->
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card">
+          <div class="pricing-icon">📄</div>
+          <h5 class="fw-800 mb-1">Project Documentation</h5>
+          <div class="pricing-price">RM 10 <span>/ one-time</span></div>
+          <p class="pricing-desc">Full PDF report covering methodology, AI design, and results.</p>
+          <ul class="pricing-includes">
+            <li><i class="bi bi-check-circle-fill"></i>Full PDF methodology report</li>
+            <li><i class="bi bi-check-circle-fill"></i>AI design & architecture</li>
+            <li><i class="bi bi-check-circle-fill"></i>Game results & analysis</li>
+          </ul>
+          <a href="https://forms.google.com/REPLACE_WITH_YOUR_FORM_ID" target="_blank" class="btn-order-outline">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Full Bundle — FEATURED -->
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card featured">
+          <div class="pricing-badge">⭐ Best Value</div>
+          <div class="pricing-icon">🏆</div>
+          <h5 class="fw-800 mb-1">Full Game Bundle</h5>
+          <div class="pricing-price">RM 35 <span>/ one-time</span></div>
+          <p class="pricing-desc">Everything you need — game file and full documentation together.</p>
+          <ul class="pricing-includes">
+            <li><i class="bi bi-check-circle-fill"></i>PictoBlox .sb3 game file</li>
+            <li><i class="bi bi-check-circle-fill"></i>Full PDF documentation</li>
+            <li><i class="bi bi-check-circle-fill"></i>All assets & sprites</li>
+          </ul>
+          <a href="https://forms.google.com/REPLACE_WITH_YOUR_FORM_ID" target="_blank" class="btn-order">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Consultation -->
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card">
+          <div class="pricing-icon">🤝</div>
+          <h5 class="fw-800 mb-1">Consultation & Setup</h5>
+          <div class="pricing-price">RM 80 <span>/ session</span></div>
+          <p class="pricing-desc">1-hour online session to help you set up and run the game.</p>
+          <ul class="pricing-includes">
+            <li><i class="bi bi-check-circle-fill"></i>1-hour online session</li>
+            <li><i class="bi bi-check-circle-fill"></i>Step-by-step setup guidance</li>
+            <li><i class="bi bi-check-circle-fill"></i>Q&A with the developer</li>
+          </ul>
+          <a href="https://forms.google.com/REPLACE_WITH_YOUR_FORM_ID" target="_blank" class="btn-order-outline">Order Now</a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-center mt-4" style="color:var(--muted); font-size:.9rem;">
+      <i class="bi bi-info-circle me-1"></i>
+      All orders are processed via Google Form. We will contact you within 24 hours after submission.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════ SECTION 7 – VIDEO & DOWNLOAD ══════════════ -->
 <section id="demo">
   <div class="container reveal">
     <div class="text-center mb-5">
@@ -494,7 +625,7 @@
             Example: https://www.youtube.com/watch?v=dQw4w9WgXcQ → VIDEO_ID = dQw4w9WgXcQ
           -->
           <iframe
-            src="https://www.youtube.com/embed/_KdVGa6-1K8"
+            src="https://www.youtube.com/embed/d96rG5NE_YM?si=baWXRUePBMvplnJR"
             title="Sustainable Eating AI Game Demo"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
